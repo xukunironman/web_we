@@ -1,0 +1,27 @@
+div.topnav{
+	position: relative;
+}
+div.topnav ul.topnavbar{
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: #333;
+	    width: 100%;
+}
+ul.topnavbar li {
+	float:left;
+}
+ul.topnavbar li a{
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+ul.topnavbar li a:hover:not(.topnavbar-active){
+	background-color:#111;
+}
+ul.topnavbar li a.topnavbar-active{
+	background-color:#4CAF50;
+}
