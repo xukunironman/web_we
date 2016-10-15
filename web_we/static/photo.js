@@ -1,7 +1,5 @@
 function initPhoto(){
 	initTitleClock();
-
-
 	CreatTab_Con("2016");
 	InsertImgToCon("2016","image/2014-8-taishan.jpg","this is a image","Love");
 	CreatTab_Con("2015");
@@ -20,5 +18,13 @@ function initPhoto(){
 	CreatTab_Con("2014");
 	InsertImgToCon("2014","image/test2.jpg","this is a image","good");
 	*/
+}
+function getDatas(){
+	$.Ajax({
+		method:"GET",
+		
+		
+	})
+	
 }
 window.onload=initPhoto
