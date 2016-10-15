@@ -1,13 +1,13 @@
 import web
 
 urls=(
-	'/',home,
+	'/','Home'
 	
 )
 render=web.template.render('templates')
 class home:
 	def GET(self):
-		return render.home()
+		return render.Home()
 	
 if __name__=="__main__":
 	app.run()
