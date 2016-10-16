@@ -23,7 +23,7 @@ class request:
 			req=input[request]
 class admin:
 	def GET(self):
-		
+		return render.admin()
 		
 if __name__=="__main__":
     app=web.application(urls,globals())
