@@ -3,6 +3,7 @@ import web
 urls=(
 '/',"home",
 '/photo','photo',
+'/admin','admin'
 '/request','request')
 render=web.template.render('templates/')
 
@@ -20,6 +21,9 @@ class request:
 		input=web.input()
 		if "request" in input:
 			req=input[request]
+class admin:
+	def GET(self):
+		
 		
 if __name__=="__main__":
     app=web.application(urls,globals())
