@@ -1,5 +1,7 @@
 import web
-
+import json
+from rwlist import *
+from getDirLs import *
 urls=(
 '/',"home",
 '/photo','photo',
@@ -20,7 +22,18 @@ class request:
 	def GET(self):
 		input=web.input()
 		if "request" in input:
-			req=input[request]
+			req=input["request"]
+			if req=="photolist":
+				p='/static/image'
+				ls=GetDirList(p)
+				return json.dump(ls)
+			elif req=="data":
+				p="datas/time.txt"
+				(code,ls)=ReadList(p)
+				if code==0:				#No Error
+					return ls[-1]
+				else :
+				print("Error:"+ls)
 class admin:
 	def GET(self):
 		return render.admin()

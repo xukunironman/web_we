@@ -21,8 +21,15 @@ function initPhoto(){
 }
 function getDatas(){
 	$.Ajax({
-		method:"GET",
-		
+		type:"GET",
+		data:{"request":"photolist"},
+		cache:false,
+		url:"/request",
+		dataType:"json",
+		success:function(data){
+			
+			
+		}
 		
 	})
 	
