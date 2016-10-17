@@ -27,13 +27,18 @@ class request:
 				p='/static/image'
 				ls=GetDirList(p)
 				return json.dump(ls)
-			elif req=="data":
+			elif req=="datatime":
 				p="datas/time.txt"
 				(code,ls)=ReadList(p)
 				if code==0:				#No Error
-					return ls[-1]
+					datatimelist=ls[-1].split('-')
+					datatimedic={"yea":datatimelist[0],"mon":datatimelist[1],"day":datatimelist[2],"hou":datatimelist[3],"min":datatimelist[4],"sec":datatimelist[5],"mil":datatimelist[6]}		
+					valdic={"status":"OK","value":datatimedic}
+					print("No error :"+valdic)
 				else :
-				print("Error:"+ls)
+					print("Error:"+ls)
+					valdic={"status":"WRONG","value":"No data in database"}
+				return json.dump(valdic)
 class admin:
 	def GET(self):
 		return render.admin()

@@ -19,19 +19,5 @@ function initPhoto(){
 	InsertImgToCon("2014","image/test2.jpg","this is a image","good");
 	*/
 }
-function getDatas(){
-	$.Ajax({
-		type:"GET",
-		data:{"request":"photolist"},
-		cache:false,
-		url:"/request",
-		dataType:"json",
-		success:function(data){
-			
-			
-		}
-		
-	})
-	
-}
+
 window.onload=initPhoto
