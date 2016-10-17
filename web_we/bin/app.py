@@ -32,7 +32,7 @@ class request:
 				(code,ls)=ReadList(p)
 				if code==0:				#No Error
 					datatimelist=ls[-1].split('-')
-					datatimedic={"yea":datatimelist[0],"mon":datatimelist[1],"day":datatimelist[2],"hou":datatimelist[3],"min":datatimelist[4],"sec":datatimelist[5],"mil":datatimelist[6]}		
+					datatimedic={"yea":datatimelist[0],"mon":datatimelist[1],"day":datatimelist[2],"hou":datatimelist[3],"min":datatimelist[4],"sec":datatimelist[5]}		
 					valdic={"status":"OK","value":datatimedic}
 					print("No error :"+valdic)
 				else :
