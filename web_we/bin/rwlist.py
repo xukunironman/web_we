@@ -19,13 +19,13 @@ def ReadList(url):
 			list=strls.split(',')
 			return (0,list)
 
-def WriteList(url,ls,mode="a")		
+def WriteList(url,ls,mode="a"):	
 	if os.path.exists(url)==False:  	#file not exist
 		with open(url,'w') as f:		#create file
 			f.write(initString)
-	if mode=="a"						#add ls to this file
+	if mode=="a":						#add ls to this file
 		with open(url,'at') as f:
 			f.write(ls)
-	else if mode=="w"					#rewrite ls to this file
+	elif mode=="w":					#rewrite ls to this file
 		with open(url,'wt') as f:
 			f.write(ls)	

@@ -1,5 +1,5 @@
 var yea=2016,mon=9,day=4,hou=14,min=50,sec=0,mil=0;
-var initTimeFlag=0
+var initTimeFlag=0;
 
 function initHome(){
 	initTitleClock();
